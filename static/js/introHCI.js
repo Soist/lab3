@@ -25,7 +25,13 @@ function initializePage() {
     	$("#myimg").animate({"width":200},1000);
 
     	var containingProject = $(this).closest(".project");
-    containingProject.append("<div class='project-description'><p>Description of the Project</p></div>");
+    	var description = $(containingProject).find(".project-description");
+    	if(description.length == 0){
+    		containingProject.append("<div class='project-description'><p>Description of the Project</p></div>");
+    	}else {
+    		description.html("<p>Stop clicking on me! You just did it at " + (new Date()) + "</p>");
+    	}
+
     })
 
     
