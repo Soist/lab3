@@ -23,6 +23,12 @@ function initializePage() {
     	//to the object that triggers the event
     	$(this).css("background-color", "#7fff00");
     	$("#myimg").animate({"width":200},1000);
-    })};
+
+    	var containingProject = $(this).closest(".project");
+    containingProject.append("<div class='project-description'><p>Description of the Project</p></div>");
+    })
+
+    
+};
 
     //$("myelement").animate({"css-property":"value"}, durationInMilliseconds);
